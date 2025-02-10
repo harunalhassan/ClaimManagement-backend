@@ -1,1 +1,2 @@
+<<<<<<< HEAD
 # ClaimManagement-backend

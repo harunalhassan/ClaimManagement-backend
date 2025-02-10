@@ -1,4 +1,4 @@
-name: Backend Tests
+name: Run Tests
 
 on: [push, pull_request]
 
@@ -8,15 +8,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # ✅ Ensures all dependencies are installed
 
       - name: Run tests
-        run: npm test
+        run: npm test  # ✅ Runs Jest tests

@@ -15,10 +15,4 @@ describe("GET /api/claims", () => {
     expect(Array.isArray(res.body)).toBe(true);
   });
 });
-describe("POST /api/claims", () => {
-  it("shoul create a claim", async () => {
-    const res = await request(app).get("/api/claims");
-    expect(res.statusCode).toBe(200);
-    expect(Array.isArray(res.body)).toBe(true);
-  });
-});
+

@@ -3,7 +3,7 @@ name: Run Tests
 on: push
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: linux-latest
 
     steps:
       - name: Checkout repository

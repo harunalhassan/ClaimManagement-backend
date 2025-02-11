@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = "mongodb+srv://harunalhassan10:Z8q9GH5sOkL2WnfU@claimdbs.pdtfx.mongodb.net/?retryWrites=true&w=majority&appName=claimdbs";
 mongoose
   .connect(MONGO_URI)
   .then(() => console.log("MongoDB Connected"))

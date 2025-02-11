@@ -1,10 +1,10 @@
 const request = require("supertest");
-const mongoose = require("mongoose"); // ✅ Import mongoose to close the connection
+const mongoose = require("mongoose"); //  Import mongoose to close the connection
 const app = require("../app");
 
 describe("API Tests", () => {
   afterAll(async () => {
-    await mongoose.connection.close(); // ✅ Close MongoDB connection after tests
+    await mongoose.connection.close(); // Close MongoDB connection after tests
   });
 
   describe("GET /api/policies", () => {

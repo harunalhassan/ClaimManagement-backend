@@ -75,7 +75,7 @@ app.use((err, req, res, next) => {
 });
 
 // -------------------- Export App & Start Server --------------------
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 
 // **Only start the server if the file is run directly**
 if (require.main === module) {

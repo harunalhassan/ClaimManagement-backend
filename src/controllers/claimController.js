@@ -59,7 +59,12 @@ async function updateClaimStatus(req, res) {
             return res.status(400).json({ error: "Invalid status update" });
         }
 
-        const claim = await Claim.findByIdAndUpdate(req.params.id, { status }, { new: true });
+        const claim = await Claim.findByIdAndUpdate(
+            req.params.id, 
+            { status, updatedAt: new Date() },  // Explicitly update 'updatedAt'
+            { new: true } // Return the updated document
+        );
+
         if (!claim) return res.status(404).json({ error: "Claim not found" });
 
         res.json(claim);
